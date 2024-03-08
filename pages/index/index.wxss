@@ -1,0 +1,113 @@
+/**index.wxss**/
+
+.flex-item {
+    width: 95rpx;
+    height: 100px;
+}
+
+.kcb-item {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.smalltext {
+    width: 97rpx;
+    font-size: 7pt;
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    margin-left: 35rpx;
+    background-color: #F5F5F7;
+    color: #000000;
+}
+
+.top-text {
+    width: 100rpx;
+    height: 35rpx;
+    font-size: 9pt;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    width: 35rpx;
+    height: 100rpx;
+    font-size: 9pt;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+/* .scroll {
+  height: 1170rpx;
+  z-index: 101;
+  position: fixed;
+} */
+/*以下是官网的代码, 我偷来的*/
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-col-center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.toptop .title {
+    margin-right: 10rpx;
+}
+
+.toptop .picker .name {
+    /* border: 1rpx solid #fff; */
+    padding: 3rpx 30rpx 3rpx 10rpx;
+    position: relative;
+    border-radius: 8px;
+}
+
+.toptop .picker .name::after {
+    content: '';
+    position: absolute;
+    top: calc(50% + 10rpx);
+    right: 5rpx;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border: 10rpx solid transparent;
+    border-top-color: #fff;
+}
+
+.noplace{
+    text-align: center;
+}
+.othercourses{
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 4.5fr 3.5fr 2fr;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: rgb(208, 220, 231);
+    font-size: smaller;
+    height: 60rpx;
+}
+.othercourses view{
+    opacity: 0.8;
+    margin: auto;
+    border-radius: 2%;
+    text-align: center;
+}
+.today {
+    font-weight: bold; /* 字体加粗 */
+    color: rgb(221, 43, 43); /* 字体颜色变为红色 */
+  }

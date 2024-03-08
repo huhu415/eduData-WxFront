@@ -1,0 +1,26 @@
+// 支持es4语法
+var filter = {
+    isToday: function (index, select) {
+        // 判断选择的这一周, 是不是当前周
+        StartData = getDate(2024,2,4); // 3.4日
+        // console.log(StartData)
+        var currentDate = getDate();
+        var gapday = parseInt((currentDate - StartData) / 86400000)
+        var week = parseInt(gapday / 7)
+        // console.log(week)
+
+        // 如果是, 判断周几是应该红色
+        if (select.selectedTypeIndex == week) {
+            var today = getDate().getDay()
+            if (today === index + 1) { // 因为getDay返回的是0到6，而我们的索引是0到6，所以要加1
+                return 'today'; // 返回一个样式类名，用于改变样式
+            } else {
+                return ''; // 如果不是今天则返回空字符串
+            }
+        }
+    }
+}
+// 导出对外暴露的属性
+module.exports = {
+    isToday: filter.isToday
+}

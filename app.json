@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/send/send",
+        "pages/zmyself/zmyself",
+        "pages/zhuce/zhuce",
+        "pages/opensoure/opensoure",
+        "pages/aboutMe/aboutMe"
+    ],
+    "window": {
+        "backgroundColor": "#F5F5F6",
+        "backgroundTextStyle": "dark",
+        "navigationBarTitleText": "hello",
+        "navigationBarBackgroundColor": "#104E8B",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#515151",
+        "selectedColor": "#104E8B",
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "",
+                "iconPath": "images/zhuye.png",
+                "selectedIconPath": "images/ziyuan.png"
+            },
+            {
+                "pagePath": "pages/send/send",
+                "text": "",
+                "iconPath": "images/tubiaozhizuomoban-.png",
+                "selectedIconPath": "images/tubiaozhizuomoban--2.png"
+            },
+            {
+                "pagePath": "pages/zmyself/zmyself",
+                "text": "",
+                "iconPath": "images/geren.png",
+                "selectedIconPath": "images/wode.png"
+            }
+        ]
+    },
+    "lazyCodeLoading": "requiredComponents"
+}
