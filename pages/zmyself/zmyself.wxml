@@ -1,0 +1,57 @@
+<view>
+    <view class="image-parent">
+        <image src="/IMG_6158.jpg" mode="aspectFill" class="image"></image>
+        <view class="child">
+            <button wx:if="{{buttonhidden}}" type="primary" class="login-btn" size="mini" catchtap="getUserProfile">登陆</button>
+            <view class="usernum" wx:if="{{!buttonhidden}}">{{user}}</view>
+        </view>
+    </view>
+
+    <view class="txkuang">
+        <navigator hover-class="navigator-hover">
+            <view class="firstblock" style="border-bottom: 0px;" catchtap="pullAllCoure">
+                <view class="text">拉取/更新数据📝</view>
+                <view class="text textsmall">从教务处更新数据 ></view>
+            </view>
+        </navigator>
+    </view>
+
+
+    <view class="txkuang" style="margin-top: 30rpx;">
+        <button hover-class="navigator-hover" style="width: 100%;" open-type="share">
+            <view class="firstblock">
+                <view class="text">推荐给好友👭</view>
+                <view class="text textsmall">鼓励一下吧 ></view>
+            </view>
+        </button>
+
+        <button hover-class="navigator-hover" style="width: 100%;" open-type="contact">
+            <view class="firstblock" style="border-bottom: 0px;">
+                <view class="text">联系客服💁</view>
+                <view class="text textsmall">欢迎给作者提建议 ></view>
+            </view>
+        </button>
+    </view>
+
+
+    <view class="txkuang" style="margin-top: 20rpx;">
+        <navigator url="/pages/opensoure/opensoure" hover-class="navigator-hover" open-type="navigate">
+            <view class="firstblock">
+                <view class="text">关于开源📝</view>
+                <view class="text textsmall">本项目已全部开源 ></view>
+            </view>
+        </navigator>
+
+        <navigator url="/pages/aboutMe/aboutMe" hover-class="navigator-hover" open-type="navigate">
+            <view class="firstblock" style="border-bottom: 0px;">
+                <view class="text">关于我🤪</view>
+                <view class="text textsmall"> ></view>
+            </view>
+        </navigator>
+    </view>
+
+
+    <view class="tishi">
+        <view class="dengdai">哈理工只能于日间,登陆或拉取课程表</view>
+    </view>
+</view>
