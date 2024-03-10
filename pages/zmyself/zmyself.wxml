@@ -19,17 +19,21 @@
 
     <view class="txkuang" style="margin-top: 30rpx;">
         <button hover-class="navigator-hover" style="width: 100%;" open-type="share">
-            <view class="firstblock">
-                <view class="text">推荐给好友👭</view>
-                <view class="text textsmall">鼓励一下吧 ></view>
-            </view>
+            <navigator hover-class="navigator-hover">
+                <view class="firstblock">
+                    <view class="text">推荐给好友👭</view>
+                    <view class="text textsmall">鼓励一下吧 ></view>
+                </view>
+            </navigator>
         </button>
 
         <button hover-class="navigator-hover" style="width: 100%;" open-type="contact">
-            <view class="firstblock" style="border-bottom: 0px;">
-                <view class="text">联系客服💁</view>
-                <view class="text textsmall">欢迎给作者提建议 ></view>
-            </view>
+            <navigator hover-class="navigator-hover">
+                <view class="firstblock" style="border-bottom: 0px;">
+                    <view class="text">联系客服💁</view>
+                    <view class="text textsmall">欢迎给作者提建议 ></view>
+                </view>
+            </navigator>
         </button>
     </view>
 
