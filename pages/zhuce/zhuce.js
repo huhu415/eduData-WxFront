@@ -12,25 +12,28 @@ Page({
                 { value: "neau", name: "东北农业大学" }
             ], // 年级
             [
-                { value: "1", name: '本科生' },
-                { value: "2", name: '研究生' },
+                { value: "1", name: '本科' },
+                { value: "2", name: '硕士' },
             ] // 这里对应年级的第一个元素的班级，也就是一年级的班级
         ],
+        are: true,
         classArray: [
             [
-                { value: "1", name: '本科生' },
-                { value: "2", name: '研究生' },
+                { value: "1", name: '本科' },
+                { value: "2", name: '硕士' },
             ],
             [
-                { value: "1", name: '本科生' },
+                { value: "1", name: '本科' },
             ]
         ],
     },
     // 点击确认时触发
     bindMultiPickerChange(event) {
         console.log(event)
+        wx.vibrateShort();
         this.setData({
-            multiIndex: event.detail.value
+            multiIndex: event.detail.value,
+            are: false
         })
     },
 
@@ -63,7 +66,7 @@ Page({
         wx.vibrateShort()
         var orderInfo = e.detail.value
         console.log(orderInfo)
-        if (String(orderInfo.password).length < 4 || String(orderInfo.user).length < 4) {
+        if (String(orderInfo.password).length < 4 || String(orderInfo.user).length < 4 || orderInfo.selector == "") {
             wx.showToast({
                 title: '请检查表单是否填写正确',
                 icon: 'none',
@@ -75,8 +78,8 @@ Page({
             title: '请求中...',
         })
         orderInfo.school = this.data.multiArray[0][orderInfo.selector[0]].value,
-        orderInfo.studentType = this.data.multiArray[1][orderInfo.selector[1]].value,
-        delete orderInfo.selector;
+            orderInfo.studentType = this.data.multiArray[1][orderInfo.selector[1]].value,
+            delete orderInfo.selector;
         wx.request({
             // url: 'http://127.0.0.1:8080/signin',
             url: 'https://zzyan.com/signin',

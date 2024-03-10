@@ -160,6 +160,9 @@ Page({
         // 触发震动
         wx.vibrateShort();
     },
+    showCardView: function(e){
+        // todo 增加点击课程, 显示课程详细信息功能
+    },
     onLoad: function (e) {
         console.log('onLoad')
 
