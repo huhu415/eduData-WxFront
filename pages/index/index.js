@@ -48,7 +48,7 @@ Page({
                 // 有时间和地点的课程
                 wx.request({
                     // url: 'http://127.0.0.1:8080/getweekcoure/' + weekreq,
-                    url: 'https://zzyan.com/getweekcoure/' + weekreq,
+                    url: 'https://zzyan.com:8000/getweekcoure/' + weekreq,
                     method: 'POST',
                     header: {
                         'content-type': 'application/x-www-form-urlencoded',
@@ -106,7 +106,7 @@ Page({
                 if (refesh == 1) {
                     wx.request({
                         // url: 'http://127.0.0.1:8080/getweekcoure/0' ,
-                        url: 'https://zzyan.com/getweekcoure/0',
+                        url: 'https://zzyan.com:8000/getweekcoure/0',
                         method: 'POST',
                         header: {
                             'content-type': 'application/x-www-form-urlencoded',
