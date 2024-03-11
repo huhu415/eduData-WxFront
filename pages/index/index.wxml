@@ -7,7 +7,7 @@
     <!-- 这是偷官网的自定义的顶部栏 -->
     <custom-navigation-bar id="customNavigationBar" bar-style="2">
         <view style="width: 100%;height: 100%;" class="toptop flex-center">
-            <picker mode="selector" range='{{type}}' bindchange='picker' bindtap="handlePickerTap" class="picker flex-col-center">
+            <picker mode="selector" range='{{type}}' bindchange='picker' bindtap="handlePickerTap" class="picker flex-col-center" value="{{selectedTypeIndex}}">
                 <view class="name">
                     第 {{type[selectedTypeIndex]}} 周
                 </view>

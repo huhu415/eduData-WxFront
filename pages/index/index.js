@@ -174,4 +174,8 @@ Page({
 
         this.identy(e, week, 1);
     },
+    onPullDownRefresh: function() {
+        this.onLoad()
+        wx.stopPullDownRefresh();
+      },
 })
