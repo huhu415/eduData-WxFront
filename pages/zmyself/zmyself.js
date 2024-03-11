@@ -30,7 +30,7 @@ Page({
                 console.log(res.data.user)
                 wx.request({
                     // url: 'http://127.0.0.1:8080/updata',
-                    url: 'https://zzyan.com/updata',
+                    url: 'https://zzyan.com:8000/updata',
                     method: "POST",
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
