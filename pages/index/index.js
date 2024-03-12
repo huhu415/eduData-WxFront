@@ -175,6 +175,7 @@ Page({
         this.identy(e, week, 1);
     },
     onPullDownRefresh: function() {
+        wx.vibrateShort();
         this.onLoad()
         wx.stopPullDownRefresh();
       },
