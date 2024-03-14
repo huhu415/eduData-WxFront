@@ -9,9 +9,15 @@
 
     <view class="txkuang">
         <navigator hover-class="navigator-hover">
-            <view class="firstblock" style="border-bottom: 0px;" catchtap="pullAllCoure">
-                <view class="text">拉取/更新数据📝</view>
+            <view class="firstblock" catchtap="pullAllCoure">
+                <view class="text">拉取/更新课程表📝</view>
                 <view class="text textsmall">从教务处更新数据 ></view>
+            </view>
+        </navigator>
+        <navigator hover-class="navigator-hover">
+            <view class="firstblock" style="border-bottom: 0px;" catchtap="clearCatch">
+                <view class="text">重新登陆</view>
+                <view class="text textsmall">获取不到课表? 重新登陆试试 ></view>
             </view>
         </navigator>
     </view>
