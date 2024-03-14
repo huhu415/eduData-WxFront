@@ -84,6 +84,24 @@ Page({
             }
         });
     },
+    clearCatch: function () {
+        wx.vibrateShort();
+        wx.getStorage({
+            key: 'key', // 指定要获取的数据的 key
+            encrypt: true,
+            success: (res) => {
+                wx.clearStorageSync()
+                this.onShow()
+            },
+            fail: (err) =>{
+                wx.showToast({
+                    title: "请检查是否登陆",
+                    icon: 'none',
+                    duration: 1800
+                })
+            }
+        })
+    },
     openSoure: function () {
         // 登陆后, 才可以访问开源网页
         wx.getStorage({
@@ -119,7 +137,7 @@ Page({
             encrypt: true,
             success: (res) => {
                 // 成功获取到数据
-                console.log(res);
+                // console.log(res);
                 this.setData({
                     buttonhidden: false,
                     user: res.data.user,
@@ -127,6 +145,11 @@ Page({
                 // this.setData.buttonhidden = false;
                 // this.setData.user = res.data.user;
             },
+            fail:() =>{
+                this.setData({
+                    buttonhidden: true,
+                })
+            }
         });
     },
 
