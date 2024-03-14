@@ -39,8 +39,8 @@
 
 
     <view class="txkuang" style="margin-top: 20rpx;">
-        <navigator url="/pages/opensoure/opensoure" hover-class="navigator-hover" open-type="navigate">
-            <view class="firstblock">
+        <navigator hover-class="navigator-hover">
+            <view class="firstblock" catchtap="openSoure">
                 <view class="text">关于开源📝</view>
                 <view class="text textsmall">本项目已全部开源 ></view>
             </view>

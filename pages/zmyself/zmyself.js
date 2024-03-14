@@ -85,7 +85,16 @@ Page({
         });
     },
     openSoure: function () {
-
+        // 登陆后, 才可以访问开源网页
+        wx.getStorage({
+            key: 'key', // 指定要获取的数据的 key
+            encrypt: true,
+            success: (res) => {
+                wx.navigateTo({
+                    url: '/pages/opensoure/opensoure',
+                })
+            }
+        })
     },
     /**
      * 生命周期函数--监听页面加载
