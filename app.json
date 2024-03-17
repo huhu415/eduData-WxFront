@@ -2,16 +2,16 @@
     "pages": [
         "pages/index/index",
         "pages/logs/logs",
-        "pages/send/send",
+        "pages/CheckScores/CheckScores",
         "pages/zmyself/zmyself",
         "pages/zhuce/zhuce",
         "pages/opensoure/opensoure",
         "pages/aboutMe/aboutMe"
     ],
     "window": {
-        "backgroundColor": "#F5F5F6",
+        "backgroundColor": "#F5F5F5",
         "backgroundTextStyle": "dark",
-        "navigationBarTitleText": "hello",
+        "navigationBarTitleText": "理工小明",
         "navigationBarBackgroundColor": "#104E8B",
         "navigationBarTextStyle": "white"
     },
@@ -27,7 +27,7 @@
                 "selectedIconPath": "images/ziyuan.png"
             },
             {
-                "pagePath": "pages/send/send",
+                "pagePath": "pages/CheckScores/CheckScores",
                 "text": "",
                 "iconPath": "images/tubiaozhizuomoban-.png",
                 "selectedIconPath": "images/tubiaozhizuomoban--2.png"

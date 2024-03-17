@@ -2,15 +2,15 @@
     "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
     "projectname": "%E7%90%86%E5%B7%A5%E5%B0%8F%E6%98%8E",
     "setting": {
-        "compileHotReLoad": true,
-        "urlCheck": true
+        "compileHotReLoad": false,
+        "urlCheck": false
     },
     "condition": {
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/opensoure/opensoure",
-                    "pathName": "pages/opensoure/opensoure",
+                    "name": "pages/CheckScores/CheckScores",
+                    "pathName": "pages/CheckScores/CheckScores",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
@@ -18,13 +18,6 @@
                 {
                     "name": "pages/zmyself/zmyself",
                     "pathName": "pages/zmyself/zmyself",
-                    "query": "",
-                    "launchMode": "default",
-                    "scene": null
-                },
-                {
-                    "name": "pages/zhuce/zhuce",
-                    "pathName": "pages/zhuce/zhuce",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

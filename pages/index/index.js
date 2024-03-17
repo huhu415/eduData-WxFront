@@ -57,7 +57,7 @@ Page({
                     data: {
                         username: res.data.user,
                         password: res.data.password,
-                        school:res.data.school,
+                        school: res.data.school,
                         studentType: res.data.studentType,
                     },
                     success: (res) => {
@@ -97,7 +97,7 @@ Page({
                         wx.showToast({
                             title: "网络请求失败",
                             icon: 'none',
-                            duration: 1800
+                            duration: 2500
                         })
                     },
                 });
@@ -115,7 +115,7 @@ Page({
                         data: {
                             username: res.data.user,
                             password: res.data.password,
-                            school:res.data.school,
+                            school: res.data.school,
                             studentType: res.data.studentType,
                         },
                         success: (res) => {
@@ -152,17 +152,25 @@ Page({
             }
         })
     },
+
+    // 确认时
     picker(e) {
         wx.vibrateShort();
         this.identy(e);
     },
+
+    // 点击时
     handlePickerTap: function () {
         // 触发震动
         wx.vibrateShort();
     },
-    showCardView: function(e){
+
+    // 点击课程
+    showCardView: function (e) {
         // todo 增加点击课程, 显示课程详细信息功能
     },
+
+    // 自带函数
     onLoad: function (e) {
         console.log('onLoad')
 
@@ -174,9 +182,11 @@ Page({
 
         this.identy(e, week, 1);
     },
-    onPullDownRefresh: function() {
+
+    // 下拉刷新
+    onPullDownRefresh: function () {
         wx.vibrateShort();
         this.onLoad()
         wx.stopPullDownRefresh();
-      },
+    },
 })
