@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: row;
     margin-left: 35rpx;
-    background-color: #F5F5F7;
+    background-color: #F5F5F5;
     color: #000000;
 }
 

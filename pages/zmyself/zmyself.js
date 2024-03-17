@@ -16,6 +16,74 @@ Page({
             url: '/pages/zhuce/zhuce',
         })
     },
+    // 拉取成绩
+    pullAllCoureGrade: function() {
+        wx.vibrateShort();
+        wx.getStorage({
+            key: 'key', // 指定要获取的数据的 key
+            encrypt: true,
+            success: (res) => {
+                // 成功获取到数据
+                wx.showLoading({
+                    title: '拉取中...',
+                })
+                console.log(res.data.user)
+                wx.request({
+                    url: 'http://127.0.0.1:8080/updataGrade',
+                    // url: 'https://zzyan.com:8000/updataGrade',
+                    method: "POST",
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded'
+                    },
+                    data: {
+                        username: res.data.user,
+                        password: res.data.password,
+                        school: res.data.school,
+                        studentType: res.data.studentType,
+                    },
+                    success: function (res) {
+                        wx.hideLoading();
+                        console.log(res)
+                        if (res.statusCode == 200) {
+                            //成功后跳转到index页面
+                            wx.switchTab({
+                                url: '/pages/CheckScores/CheckScores',
+                                success: function (e) {
+                                    var page = getCurrentPages().pop();
+                                    if (page == undefined || page == null) return;
+                                    page.onLoad();
+                                }
+                            })
+                        } else {
+                            // 大概率是小程序登陆后, 改密码了, 然后用登陆的账户和密码失效了
+                            wx.showToast({
+                                title: "拉取失败.." + res.data.message,
+                                icon: 'none',
+                                duration: 2500
+                            })
+                        }
+                    },
+                    fail: function (err) {
+                        wx.hideLoading();
+                        // 请求失败时的处理逻辑
+                        console.error('请求失败', err);
+                        wx.showToast({
+                            title: "网络请求失败",
+                            icon: 'none',
+                            duration: 2500
+                        })
+                    },
+                })
+            },
+            fail: function (err) {
+                wx.showToast({
+                    title: "请检查是否登陆",
+                    icon: 'none',
+                    duration: 1800
+                })
+            }
+        });
+    },
     // 拉取课程
     pullAllCoure: function () {
         wx.vibrateShort();
@@ -110,6 +178,13 @@ Page({
             success: (res) => {
                 wx.navigateTo({
                     url: '/pages/opensoure/opensoure',
+                })
+            },
+            fail: (err) => {
+                wx.showToast({
+                    title: "请检查是否登陆",
+                    icon: 'none',
+                    duration: 1800
                 })
             }
         })

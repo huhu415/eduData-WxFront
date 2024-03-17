@@ -5,30 +5,24 @@
             <view class="sub"> 账号 </view>
             <input type="text" placeholder="请输入账号" class="phone_number" name="user"> </input>
         </view>
+
         <view class="inputRow1">
             <viev class="sub">密码</viev>
             <input type="text" password="true" placeholder="请输入密码" class="phone_number" name="password"></input>
         </view>
+
         <view class="inputRow1">
             <viev class="sub">学校</viev>
             <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{}}" range="{{multiArray}}" range-key="name" name="selector">
-            <view class="phone_number" style="display: grid;place-items: center;">
-                <view hidden="{{are}}">
-                    {{multiArray[0][multiIndex[0]].name}}-{{multiArray[1][multiIndex[1]].name}}
+                <view class="phone_number" style="display: grid;place-items: center;">
+                    <view hidden="{{are}}">
+                        {{multiArray[0][multiIndex[0]].name}}-{{multiArray[1][multiIndex[1]].name}}
+                    </view>
+                    <view wx:if="{{are}}" style="color: #8a8a8a;">请选择学校</view>
                 </view>
-                <view wx:if="{{are}}" style="color: #8a8a8a;">请选择学校</view>
-            </view>
             </picker>
         </view>
-
-        <!-- <view class="inputRow" style="justify-content: center; border-bottom: 0px; color: #33339b;margin-left: 0;">
-            <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}" range-key="name" name="selector">
-                <view> >
-                    {{multiArray[0][multiIndex[0]].name}}/
-                    {{multiArray[1][multiIndex[1]].name}}
-                </view>
-            </picker>
-        </view> -->
+        
         <button class="buttonStyle" type="primary" form-type="submit"> 登陆 </button>
     </form>
 </view>

@@ -1,0 +1,30 @@
+/* pages/CheckScores/CheckScores.wxss */
+.gradline {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 5fr 5fr;
+}
+
+.gradline view {
+    opacity: 0.8;
+    margin: auto;
+    border-radius: 2%;
+}
+
+.CouresGradLine {
+    display: grid;
+    justify-content: flex-start;
+    grid-template-columns: 5.5fr 1.5fr 1.5fr 1.5fr;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: rgb(208, 220, 231);
+    font-size: smaller;
+    height: 60rpx;
+}
+
+.CouresGradLine view {
+    opacity: 0.8;
+    margin: auto;
+    margin-left: 40rpx;
+    border-radius: 2%;
+}
