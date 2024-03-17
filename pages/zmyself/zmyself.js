@@ -29,8 +29,8 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    url: 'http://127.0.0.1:8080/updataGrade',
-                    // url: 'https://zzyan.com:8000/updataGrade',
+                    // url: 'http://127.0.0.1:8080/updataGrade',
+                    url: 'https://zzyan.com:8000/updataGrade',
                     method: "POST",
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
