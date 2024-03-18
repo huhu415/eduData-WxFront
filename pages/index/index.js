@@ -5,7 +5,7 @@ Page({
     data: {
         // 滚动选择列表
         type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
-        // 滚动选择
+        // 滚动选中项
         selectedTypeIndex: 0,
         // 课程列表
         wlist: [
@@ -23,7 +23,10 @@ Page({
             { "xqj": 7, "skjc": 5, "skcd": 3, "kcmc": "高等数学", "CourseLocation": "教A-301", "teacher": "张三", "color": "#b0a696" },
         ],
         // other课程列表
-        OtherCourses: []
+        OtherCourses: [],
+
+        // 时间表
+        timeTable: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     },
     identy: function (e, ...args) {
         wx.getStorage({
@@ -44,6 +47,30 @@ Page({
                 }
                 console.log("weekreq : " + weekreq)
                 // console.log(res.data.authentication)
+
+                // 请求时间表
+                wx.request({
+                    // url: 'http://127.0.0.1:8080/getTimeTable',
+                    url: 'https://zzyan.com:8000/getTimeTable',
+                    method: 'POST',
+                    header: {
+                        'content-type': 'application/x-www-form-urlencoded',
+                        "cookie": res.data.authentication,
+                    },
+                    data: {
+                        username: res.data.user,
+                        password: res.data.password,
+                        school: res.data.school,
+                        studentType: res.data.studentType,
+                    },
+                    success: (res) => {
+                        if (res.statusCode == 200) {
+                            this.setData({
+                                timeTable: res.data.timeTable
+                            })
+                        }
+                    }
+                })
 
                 // 有时间和地点的课程
                 wx.request({

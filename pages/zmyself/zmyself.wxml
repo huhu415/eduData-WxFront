@@ -22,7 +22,7 @@
         </navigator>
         <navigator hover-class="navigator-hover">
             <view class="firstblock" style="border-bottom: 0px;" catchtap="clearCatch">
-                <view class="text">重新登陆</view>
+                <view class="text">重新登陆♻️</view>
                 <view class="text textsmall">改密码了? 那需要登陆 ></view>
             </view>
         </navigator>
