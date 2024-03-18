@@ -41,10 +41,11 @@
 .left {
     width: 35rpx;
     height: 100rpx;
-    font-size: 9pt;
+    font-size: 5pt;
     justify-content: center;
     display: flex;
     align-items: center;
+    flex-direction:column;
 }
 
 /* .scroll {

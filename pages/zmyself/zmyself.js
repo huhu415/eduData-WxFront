@@ -16,8 +16,9 @@ Page({
             url: '/pages/zhuce/zhuce',
         })
     },
+
     // 拉取成绩
-    pullAllCoureGrade: function() {
+    pullAllCoureGrade: function () {
         wx.vibrateShort();
         wx.getStorage({
             key: 'key', // 指定要获取的数据的 key
@@ -84,6 +85,7 @@ Page({
             }
         });
     },
+
     // 拉取课程
     pullAllCoure: function () {
         wx.vibrateShort();
@@ -152,24 +154,37 @@ Page({
             }
         });
     },
+
+    // 清楚缓存
     clearCatch: function () {
         wx.vibrateShort();
-        wx.getStorage({
-            key: 'key', // 指定要获取的数据的 key
-            encrypt: true,
-            success: (res) => {
-                wx.clearStorageSync()
-                this.onShow()
-            },
-            fail: (err) =>{
-                wx.showToast({
-                    title: "请检查是否登陆",
-                    icon: 'none',
-                    duration: 1800
+        wx.showModal({
+            content: '确定要重新登陆么？',
+            success: function (res) {
+              if (res.confirm) {
+                wx.getStorage({
+                    key: 'key', // 指定要获取的数据的 key
+                    encrypt: true,
+                    success: (res) => {
+                        wx.clearStorageSync()
+                        wx.navigateTo({
+                            url: '/pages/zhuce/zhuce',
+                        })
+                    },
+                    fail: (err) => {
+                        wx.showToast({
+                            title: "请检查是否登陆",
+                            icon: 'none',
+                            duration: 1800
+                        })
+                    }
                 })
+              }
             }
-        })
+          })
     },
+
+    // 开源按钮
     openSoure: function () {
         // 登陆后, 才可以访问开源网页
         wx.getStorage({
@@ -220,7 +235,7 @@ Page({
                 // this.setData.buttonhidden = false;
                 // this.setData.user = res.data.user;
             },
-            fail:() =>{
+            fail: () => {
                 this.setData({
                     buttonhidden: true,
                 })
