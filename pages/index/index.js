@@ -1,6 +1,6 @@
 //index.js
 //获取应用实例
-var app = getApp()
+var app = getApp();
 Page({
     data: {
         // 滚动选择列表
@@ -50,8 +50,7 @@ Page({
 
                 // 请求时间表
                 wx.request({
-                    // url: 'http://127.0.0.1:8080/getTimeTable',
-                    url: 'https://zzyan.com:8000/getTimeTable',
+                    url: app.globalData.apiUrl + '/getTimeTable',
                     method: 'POST',
                     header: {
                         'content-type': 'application/x-www-form-urlencoded',
@@ -74,8 +73,7 @@ Page({
 
                 // 有时间和地点的课程
                 wx.request({
-                    // url: 'http://127.0.0.1:8080/getweekcoure/' + weekreq,
-                    url: 'https://zzyan.com:8000/getweekcoure/' + weekreq,
+                    url: app.globalData.apiUrl + '/getweekcoure/' + weekreq,
                     method: 'POST',
                     header: {
                         'content-type': 'application/x-www-form-urlencoded',
@@ -132,8 +130,7 @@ Page({
                 // 没有时间或地点的课程
                 if (refesh == 1) {
                     wx.request({
-                        // url: 'http://127.0.0.1:8080/getweekcoure/0' ,
-                        url: 'https://zzyan.com:8000/getweekcoure/0',
+                        url: app.globalData.apiUrl + '/getweekcoure/0',
                         method: 'POST',
                         header: {
                             'content-type': 'application/x-www-form-urlencoded',
