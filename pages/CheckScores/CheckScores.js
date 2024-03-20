@@ -17,8 +17,7 @@ Page({
             encrypt: true,
             success: (res) => {
                 wx.request({
-                    // url: 'http://127.0.0.1:8080/getgrade/',
-                    url: 'https://zzyan.com:8000/getgrade/',
+                    url: app.globalData.apiUrl+'/getgrade/',
                     method: 'POST',
                     header: {
                         'content-type': 'application/x-www-form-urlencoded',

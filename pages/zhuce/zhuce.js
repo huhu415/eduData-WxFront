@@ -81,8 +81,7 @@ Page({
             orderInfo.studentType = this.data.multiArray[1][orderInfo.selector[1]].value,
             delete orderInfo.selector;
         wx.request({
-            // url: 'http://127.0.0.1:8080/signin',
-            url: 'https://zzyan.com:8000/signin',
+            url: app.globalData.apiUrl+'/signin',
             method: "POST",
             header: {
                 'content-type': 'application/x-www-form-urlencoded'

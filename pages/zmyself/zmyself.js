@@ -30,8 +30,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    // url: 'http://127.0.0.1:8080/updataGrade',
-                    url: 'https://zzyan.com:8000/updataGrade',
+                    url: app.globalData.apiUrl+'/updataGrade',
                     method: "POST",
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
@@ -99,8 +98,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    // url: 'http://127.0.0.1:8080/updata',
-                    url: 'https://zzyan.com:8000/updata',
+                    url: app.globalData.apiUrl+'/updata',
                     method: "POST",
                     header: {
                         'content-type': 'application/x-www-form-urlencoded'
