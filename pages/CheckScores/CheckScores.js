@@ -1,4 +1,5 @@
 // pages/CheckScores/CheckScores.js
+var app = getApp();
 Page({
 
     /**

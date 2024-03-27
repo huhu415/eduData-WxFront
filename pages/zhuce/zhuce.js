@@ -1,4 +1,5 @@
 // pages/zhuce/zhuce.js
+var app = getApp();
 Page({
 
     /**
