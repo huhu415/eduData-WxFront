@@ -7,6 +7,10 @@ Page({
         type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
         // 滚动选中项
         selectedTypeIndex: 0,
+
+        // 今天星期几
+        todayWeek: 0,
+
         // 课程列表
         wlist: [
             { "xqj": 1, "skjc": 1, "skcd": 3, "kcmc": "Matlab技术与应用", "CourseLocation": "教A-301", "teacher": "张三", "color": "#2e1f54" },
@@ -36,17 +40,28 @@ Page({
                 wx.showLoading({
                     title: '请求中...',
                 })
+
+                // 当前周数, 和是否请求没有地点的课程
                 var weekreq, refesh
                 if (args.length > 0) {
                     weekreq = args[0]
                     refesh = args[1]
                 }
                 else {
-                    refesh = 0
                     weekreq = parseInt(e.detail.value, 10) + 1
+                    refesh = 0
                 }
-                console.log("weekreq : " + weekreq)
-                // console.log(res.data.authentication)
+                console.log("当前要变成第几周weekreq : " + weekreq)
+
+                if (this.currentWeek() == weekreq) {
+                    this.setData({
+                        todayWeek: new Date().getDay()+1
+                    })
+                }else{
+                    this.setData({
+                        todayWeek: 0
+                    })
+                }
 
                 // 请求时间表
                 wx.request({
@@ -194,16 +209,19 @@ Page({
         // todo 增加点击课程, 显示课程详细信息功能
     },
 
-    // 自带函数
-    onLoad: function (e) {
-        console.log('onLoad')
-
+    currentWeek: function (e) {
         // 计算出距离3.4日到今天, 是第几周
         var StartData = new Date(2024, 3 - 1, 4) //3月4日
         var currentDate = new Date();
         var gapday = parseInt((currentDate - StartData) / 86400000)
         var week = parseInt(gapday / 7) + 1
+        return week
+    },
 
+    // 自带函数
+    onLoad: function (e) {
+        console.log('onLoad');
+        var week = this.currentWeek();
         this.identy(e, week, 1);
     },
 

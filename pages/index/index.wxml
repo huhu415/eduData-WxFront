@@ -1,8 +1,4 @@
 <!--index.wxml-->
-
-<!-- 引入.wxs文件 src为相对路径，module指定当前模块的名称 -->
-<wxs module="filter" src="./index.wxs"></wxs>
-
 <view class="page">
     <!-- 这是偷官网的自定义的顶部栏 -->
     <custom-navigation-bar id="customNavigationBar" bar-style="2">
@@ -16,7 +12,14 @@
     </custom-navigation-bar>
 
     <view class="top">
-        <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="index" class="top-text {{filter.isToday(index,{selectedTypeIndex})}}">周{{item}}</view>
+        <!-- <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="index" class="top-text {{filter.isToday(index,{selectedTypeIndex})}}">周{{item}}</view> -->
+        <view class="top-text {{todayWeek == 2 ? 'today' : ''}}">周一</view>
+        <view class="top-text {{todayWeek == 3 ? 'today' : ''}}">周二</view>
+        <view class="top-text {{todayWeek == 4 ? 'today' : ''}}">周三</view>
+        <view class="top-text {{todayWeek == 5 ? 'today' : ''}}">周四</view>
+        <view class="top-text {{todayWeek == 6 ? 'today' : ''}}">周五</view>
+        <view class="top-text {{todayWeek == 7 ? 'today' : ''}}">周六</view>
+        <view class="top-text {{todayWeek == 1 ? 'today' : ''}}">周日</view>
     </view>
     <!-- <scroll-view scroll-y="false" class="scroll"> -->
 
