@@ -12,7 +12,6 @@
     </custom-navigation-bar>
 
     <view class="top">
-        <!-- <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="index" class="top-text {{filter.isToday(index,{selectedTypeIndex})}}">周{{item}}</view> -->
         <view class="top-text {{todayWeek == 2 ? 'today' : ''}}">周一</view>
         <view class="top-text {{todayWeek == 3 ? 'today' : ''}}">周二</view>
         <view class="top-text {{todayWeek == 4 ? 'today' : ''}}">周三</view>

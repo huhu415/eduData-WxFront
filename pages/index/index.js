@@ -82,6 +82,7 @@ Page({
                             this.setData({
                                 timeTable: res.data.timeTable
                             })
+                            // console.log(this.data.timeTable)
                         }
                     }
                 })
