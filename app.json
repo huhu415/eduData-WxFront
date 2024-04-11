@@ -9,7 +9,7 @@
         "pages/aboutMe/aboutMe"
     ],
     "window": {
-        "backgroundColor": "#F5F5F5",
+        "backgroundColor": "#eeeeee",
         "backgroundTextStyle": "dark",
         "navigationBarTitleText": "理工小明",
         "navigationBarBackgroundColor": "#104E8B",

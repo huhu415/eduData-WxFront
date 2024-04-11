@@ -1,15 +1,13 @@
 /**index.wxss**/
-
 .flex-item {
     width: 95rpx;
-    height: 100px;
 }
 
 .kcb-item {
     position: absolute;
     justify-content: center;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: center;
     border-radius: 5px;
 }
@@ -18,14 +16,14 @@
     width: 97rpx;
     font-size: 7pt;
     color: #ffffff;
-    padding-left: 4px;
+    padding-left: 4rpx;
 }
 
 .top {
     display: flex;
     flex-direction: row;
     margin-left: 35rpx;
-    background-color: #F5F5F5;
+    background-color: #eeeeee;
     color: #000000;
 }
 
@@ -39,13 +37,15 @@
 }
 
 .left {
-    width: 35rpx;
-    height: 100rpx;
+    margin-left: 5rpx;
+    margin-right: 10rpx;
+    width: 40rpx;
+    height: 95rpx;
     font-size: 5pt;
     justify-content: center;
     display: flex;
     align-items: center;
-    flex-direction:column;
+    flex-direction: column;
 }
 
 /* .scroll {
@@ -89,10 +89,11 @@
     border-top-color: #fff;
 }
 
-.noplace{
+.noplace {
     text-align: center;
 }
-.othercourses{
+
+.othercourses {
     display: grid;
     justify-content: flex-start;
     grid-template-columns: 4.5fr 3.5fr 2fr;
@@ -102,13 +103,29 @@
     font-size: smaller;
     height: 60rpx;
 }
-.othercourses view{
+
+.othercourses view {
     opacity: 0.8;
     margin: auto;
     border-radius: 2%;
     text-align: center;
 }
+
 .today {
-    font-weight: bold; /* 字体加粗 */
-    color: rgb(221, 43, 43); /* 字体颜色变为红色 */
-  }
+    font-weight: bold;
+    color: rgb(221, 43, 43);
+}
+
+.radiusUp {
+    background-color: #fff;
+    border-top-left-radius: 15rpx;
+    border-top-right-radius: 15rpx;
+    margin-top: 12rpx;
+}
+
+.radiusDown {
+    background-color: #fff;
+    border-bottom-left-radius: 15rpx;
+    border-bottom-right-radius: 15rpx;
+    margin-bottom: 10rpx;
+}

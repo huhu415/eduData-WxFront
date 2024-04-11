@@ -25,8 +25,8 @@
     <view style="height:1200rpx; width:100%; display:flex;">
 
         <!--左侧小节课数-->
-        <view style="background-color:#F5F5F5;color:#104E8B;">
-            <view wx:for="{{timeTable}}" wx:key="index" class="left">
+        <view style="background-color:#eeeeee;color:#104E8B;">
+            <view wx:for="{{timeTable}}" wx:key="index" class="left {{index % 2 ? 'radiusDown':'radiusUp'}}">
                 <view>{{item.StartTime}}</view>
                 <view style="font-size: 10pt;color:rgb(0, 0, 0);">{{index+1}}</view>
                 <view>{{item.EndTime}}</view>
@@ -35,7 +35,7 @@
 
         <!--大课表分割符-->
         <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="index">
-            <view style="width:715rpx; margin-top:{{(index+1)*100}}rpx;  position: absolute;border-bottom: 1rpx solid {{index == 3 || index == 7 ?';border-bottom: 2px solid red':'lightgray'}};">
+            <view style="width:690rpx; margin-top:{{(index+1)*100}}rpx;  position: absolute;border-bottom: 1rpx solid {{index == 3 || index == 7 ?';border-bottom: 2rpx solid red':'lightgray'}};">
             </view>
         </view>
 
