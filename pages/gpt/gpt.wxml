@@ -1,0 +1,21 @@
+<!--pages/send/send.wxml-->
+<view>
+    <view class="fabukuang">
+        <view>
+            <form bindsubmit="bandsubmit">
+                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请输入...'}}" name="message" bindblur="shurukuang" value="{{zhantievalue}}" maxlength="-1"></textarea>
+                
+                <view class="sub">
+                    <view class="xiaokuang1" bindtap="duquban">粘贴</view>
+                    <view class="xiaokuang1 xiaokuang3" bindtap="qingkong">清空</view>
+                    <button class="xiaokuang1 xiaokuang2" form-type="submit">发送</button>
+                </view>
+            </form>
+        </view>
+    </view>
+
+    <view class="message">
+        <view>{{message}}</view>
+    </view>
+</view>
+<!-- <button bindtap="pay">支付0.01元</button> -->
