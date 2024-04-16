@@ -7,7 +7,7 @@
         "pages/zhuce/zhuce",
         "pages/opensoure/opensoure",
         "pages/aboutMe/aboutMe",
-        "pages/gpt/gpt"
+        "pages/conv/conv"
     ],
     "window": {
         "backgroundColor": "#eeeeee",

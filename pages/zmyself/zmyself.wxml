@@ -51,10 +51,10 @@
 
 
     <view class="txkuang" style="margin-top: 20rpx;">
-        <navigator url="/pages/gpt/gpt" hover-class="navigator-hover" open-type="navigate">
+        <navigator url="/pages/conv/conv" hover-class="navigator-hover" open-type="navigate">
             <view class="firstblock">
-                <view class="text">GPT💭(beta)</view>
-                <view class="text textsmall">快来对话吧 ></view>
+                <view class="text">问问题💭</view>
+                <view class="text textsmall">快来提问吧 ></view>
             </view>
         </navigator>
         
