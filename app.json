@@ -6,7 +6,8 @@
         "pages/zmyself/zmyself",
         "pages/zhuce/zhuce",
         "pages/opensoure/opensoure",
-        "pages/aboutMe/aboutMe"
+        "pages/aboutMe/aboutMe",
+        "pages/gpt/gpt"
     ],
     "window": {
         "backgroundColor": "#eeeeee",

@@ -3,14 +3,14 @@
     "projectname": "%E7%90%86%E5%B7%A5%E5%B0%8F%E6%98%8E",
     "setting": {
         "compileHotReLoad": false,
-        "urlCheck": false
+        "urlCheck": true
     },
     "condition": {
         "miniprogram": {
             "list": [
                 {
-                    "name": "pages/CheckScores/CheckScores",
-                    "pathName": "pages/CheckScores/CheckScores",
+                    "name": "gpt",
+                    "pathName": "pages/gpt/gpt",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
