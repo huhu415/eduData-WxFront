@@ -55,37 +55,13 @@ Page({
 
                 if (this.currentWeek() == weekreq) {
                     this.setData({
-                        todayWeek: new Date().getDay()+1
+                        todayWeek: new Date().getDay() + 1
                     })
-                }else{
+                } else {
                     this.setData({
                         todayWeek: 0
                     })
                 }
-
-                // 请求时间表
-                wx.request({
-                    url: app.globalData.apiUrl + '/getTimeTable',
-                    method: 'POST',
-                    header: {
-                        'content-type': 'application/x-www-form-urlencoded',
-                        "cookie": res.data.authentication,
-                    },
-                    data: {
-                        username: res.data.user,
-                        password: res.data.password,
-                        school: res.data.school,
-                        studentType: res.data.studentType,
-                    },
-                    success: (res) => {
-                        if (res.statusCode == 200) {
-                            this.setData({
-                                timeTable: res.data.timeTable
-                            })
-                            // console.log(this.data.timeTable)
-                        }
-                    }
-                })
 
                 // 有时间和地点的课程
                 wx.request({
@@ -143,8 +119,32 @@ Page({
                     },
                 });
 
-                // 没有时间或地点的课程
+                // 只有onload才会刷新
                 if (refesh == 1) {
+                    // 请求时间表
+                    wx.request({
+                        url: app.globalData.apiUrl + '/getTimeTable',
+                        method: 'POST',
+                        header: {
+                            'content-type': 'application/x-www-form-urlencoded',
+                            "cookie": res.data.authentication,
+                        },
+                        data: {
+                            username: res.data.user,
+                            password: res.data.password,
+                            school: res.data.school,
+                            studentType: res.data.studentType,
+                        },
+                        success: (res) => {
+                            if (res.statusCode == 200) {
+                                this.setData({
+                                    timeTable: res.data.timeTable
+                                })
+                                // console.log(this.data.timeTable)
+                            }
+                        }
+                    })
+                    // 没有时间或地点的课程
                     wx.request({
                         url: app.globalData.apiUrl + '/getweekcoure/0',
                         method: 'POST',

@@ -54,6 +54,15 @@ Page({
                         })
                     }
                 })
+            },
+            fail: () => {
+                // 未找到对应的 key 或获取失败
+                console.log('获取数据失败');
+                wx.showToast({
+                    title: '请先登陆...',
+                    icon: 'success',
+                    duration: 2000
+                })
             }
         })
     },
