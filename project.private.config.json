@@ -9,15 +9,15 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "gpt",
-                    "pathName": "pages/conv/conv",
+                    "name": "aboutMe",
+                    "pathName": "pages/aboutMe/aboutMe",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
-                    "name": "pages/zmyself/zmyself",
-                    "pathName": "pages/zmyself/zmyself",
+                    "name": "gpt",
+                    "pathName": "pages/conv/conv",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
