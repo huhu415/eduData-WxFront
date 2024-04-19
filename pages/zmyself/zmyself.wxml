@@ -14,6 +14,12 @@
                 <view class="text textsmall">从教务处更新数据 ></view>
             </view>
         </navigator>
+        <navigator url="/pages/addCoures/addCoures" hover-class="navigator-hover" open-type="navigate">
+            <view class="firstblock">
+                <view class="text">添加课程(beta)</view>
+                <view class="text textsmall">来加你自己的课程吧 ></view>
+            </view>
+        </navigator>
         <navigator hover-class="navigator-hover">
             <view class="firstblock" catchtap="pullAllCoureGrade">
                 <view class="text">拉取/更新成绩单💯</view>

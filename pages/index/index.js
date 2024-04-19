@@ -68,14 +68,14 @@ Page({
                     url: app.globalData.apiUrl + '/getweekcoure/' + weekreq,
                     method: 'POST',
                     header: {
-                        'content-type': 'application/x-www-form-urlencoded',
+                        'content-type': 'application/json',
                         "cookie": res.data.authentication,
                     },
                     data: {
                         username: res.data.user,
                         password: res.data.password,
                         school: res.data.school,
-                        studentType: res.data.studentType,
+                        studentType: parseInt(res.data.studentType),
                     },
                     success: (res) => {
                         console.log(res)
@@ -126,14 +126,14 @@ Page({
                         url: app.globalData.apiUrl + '/getTimeTable',
                         method: 'POST',
                         header: {
-                            'content-type': 'application/x-www-form-urlencoded',
+                            'content-type': 'application/json',
                             "cookie": res.data.authentication,
                         },
                         data: {
                             username: res.data.user,
                             password: res.data.password,
                             school: res.data.school,
-                            studentType: res.data.studentType,
+                            studentType: parseInt(res.data.studentType),
                         },
                         success: (res) => {
                             if (res.statusCode == 200) {
@@ -149,14 +149,14 @@ Page({
                         url: app.globalData.apiUrl + '/getweekcoure/0',
                         method: 'POST',
                         header: {
-                            'content-type': 'application/x-www-form-urlencoded',
+                            'content-type': 'application/json',
                             "cookie": res.data.authentication,
                         },
                         data: {
                             username: res.data.user,
                             password: res.data.password,
                             school: res.data.school,
-                            studentType: res.data.studentType,
+                            studentType: parseInt(res.data.studentType),
                         },
                         success: (res) => {
                             console.log(res)
