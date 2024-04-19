@@ -3,7 +3,7 @@
     <view class="fabukuang">
         <view>
             <form bindsubmit="bandsubmit">
-                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请输入...'}}" name="message" bindblur="shurukuang" value="{{zhantievalue}}" maxlength="-1"></textarea>
+                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请输入...'}}" name="message" bindblur="shurukuang" 	show-confirm-bar="false" value="{{zhantievalue}}" maxlength="-1"></textarea>
                 
                 <view class="sub">
                     <view class="xiaokuang1" bindtap="duquban">粘贴</view>

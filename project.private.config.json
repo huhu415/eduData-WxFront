@@ -3,14 +3,14 @@
     "projectname": "%E7%90%86%E5%B7%A5%E5%B0%8F%E6%98%8E",
     "setting": {
         "compileHotReLoad": false,
-        "urlCheck": true
+        "urlCheck": false
     },
     "condition": {
         "miniprogram": {
             "list": [
                 {
-                    "name": "aboutMe",
-                    "pathName": "pages/aboutMe/aboutMe",
+                    "name": "addCoures",
+                    "pathName": "pages/addCoures/addCoures",
                     "query": "",
                     "launchMode": "default",
                     "scene": null

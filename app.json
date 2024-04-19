@@ -7,12 +7,13 @@
         "pages/zhuce/zhuce",
         "pages/opensoure/opensoure",
         "pages/aboutMe/aboutMe",
-        "pages/conv/conv"
+        "pages/conv/conv",
+        "pages/addCoures/addCoures"
     ],
     "window": {
         "backgroundColor": "#eeeeee",
         "backgroundTextStyle": "dark",
-        "navigationBarTitleText": "理工小明",
+        "navigationBarTitleText": "理工汪",
         "navigationBarBackgroundColor": "#104E8B",
         "navigationBarTextStyle": "white"
     },

@@ -1,0 +1,54 @@
+<view>
+    <form bindsubmit="submit">
+        <view style="background-color: white; border-radius: 6px; width: 700rpx; margin: auto;margin-bottom: 50rpx;margin-top: 70rpx;">
+            <view class="inputRow1">
+                <viev class="sub"> 课程 </viev>
+                <input class="input-coures" placeholder="必填" name="coures" />
+            </view>
+            <view class="inputRow1">
+                <viev class="sub"> 颜色 </viev>
+                <input class="input-color" placeholder="选填" value="#c1d1e0" name="color" />
+            </view>
+            <view class="inputRow1">
+                <viev class="sub"> 教师 </viev>
+                <input class="input-teacher" placeholder="选填" name="teacher" />
+            </view>
+        </view>
+        <view style="background-color: white; border-radius: 6px; border-radius: 6px; width: 700rpx; margin: auto;">
+            <view class="timecopydele">
+                <view bindtap="copy" style="color: steelblue;" hover-class="pushview">复制</view>
+                <view bindtap="dele" style="color: steelblue;" hover-class="pushview">删除</view>
+            </view>
+            <view wx:for="{{timetable}}" wx:key="index" class="timetable">
+                <view class="inputRow1" style="margin-right: 5rpx;">
+                    <view class="sub">周数</view>
+                    <view class="check-select">
+                        <checkbox-group class="group" bindchange="checkboxChange" data-index="{{index}}">
+                            <view class="label" wx:for="{{checkboxItems}}" wx:key="index">
+                                <label>
+                                    <checkbox value="{{item}}"></checkbox>
+                                    <text class="label-text">{{item}}</text>
+                                </label>
+                            </view>
+                        </checkbox-group>
+                    </view>
+                </view>
+                <view class="inputRow1">
+                    <view class="sub">时间</view>
+                    <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{timetable[index].multiIndex}}" range="{{multiArray}}" data-index="{{index}}">
+                        <view class="picker">
+                            {{multiArray[0][timetable[index].multiIndex[0]]}}，{{multiArray[1][timetable[index].multiIndex[1]]}}，{{multiArray[2][timetable[index].multiIndex[2]]}}
+                        </view>
+                    </picker>
+                </view>
+                <view class="inputRow1">
+                    <viev class="sub"> 地点 </viev>
+                    <input class="input-color" placeholder="选填" bindblur="inputfocus" data-index="{{index}}" />
+                </view>
+            </view>
+        </view>
+
+
+        <button class="buttonStyle" type="primary" form-type="submit"> 添加 </button>
+    </form>
+</view>

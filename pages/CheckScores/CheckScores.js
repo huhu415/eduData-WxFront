@@ -21,14 +21,14 @@ Page({
                     url: app.globalData.apiUrl+'/getgrade/',
                     method: 'POST',
                     header: {
-                        'content-type': 'application/x-www-form-urlencoded',
+                        'content-type': 'application/json',
                         "cookie": res.data.authentication,
                     },
                     data: {
                         username: res.data.user,
                         password: res.data.password,
                         school: res.data.school,
-                        studentType: res.data.studentType,
+                        studentType: parseInt(res.data.studentType),
                     },
                     success: (res) => {
                         if (res.statusCode == 200) {

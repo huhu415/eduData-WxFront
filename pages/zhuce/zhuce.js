@@ -85,13 +85,13 @@ Page({
             url: app.globalData.apiUrl+'/signin',
             method: "POST",
             header: {
-                'content-type': 'application/x-www-form-urlencoded'
+                'content-type': 'application/json',
             },
             data: {
                 username: orderInfo.user,
                 password: orderInfo.password,
                 school: orderInfo.school,
-                studentType: orderInfo.studentType,
+                studentType: parseInt(orderInfo.studentType),
             },
             success: function (res) {
                 wx.hideLoading();
@@ -120,19 +120,7 @@ Page({
                             if (page == undefined || page == null) return;
                             page.onLoad();
                         }
-
                     })
-                    // 跳转后刷新页面
-                    // wx.switchTab({
-                    //     url: '/pages/zmyself/zmyself',
-                    //     success: function(){
-                    //         wx.showToast({
-                    //           title: '登陆成功',
-                    //           icon: 'success',
-                    //           duration: 2000
-                    //         })
-                    //       }
-                    //   })
                 }
             },
             fail: function (err) {

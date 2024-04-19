@@ -34,13 +34,13 @@ Page({
                     url: app.globalData.apiUrl+'/updataGrade',
                     method: "POST",
                     header: {
-                        'content-type': 'application/x-www-form-urlencoded'
+                        'content-type': 'application/json',
                     },
                     data: {
                         username: res.data.user,
                         password: res.data.password,
                         school: res.data.school,
-                        studentType: res.data.studentType,
+                        studentType: parseInt(res.data.studentType),
                     },
                     success: function (res) {
                         wx.hideLoading();
@@ -102,13 +102,13 @@ Page({
                     url: app.globalData.apiUrl+'/updata',
                     method: "POST",
                     header: {
-                        'content-type': 'application/x-www-form-urlencoded'
+                        'content-type': 'application/json',
                     },
                     data: {
                         username: res.data.user,
                         password: res.data.password,
                         school: res.data.school,
-                        studentType: res.data.studentType,
+                        studentType: parseInt(res.data.studentType),
                     },
                     success: function (res) {
                         wx.hideLoading();
