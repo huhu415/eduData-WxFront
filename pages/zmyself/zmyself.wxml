@@ -59,11 +59,12 @@
     <view class="txkuang" style="margin-top: 20rpx;">
         <navigator url="/pages/conv/conv" hover-class="navigator-hover" open-type="navigate">
             <view class="firstblock">
-                <view class="text">问问题💭</view>
+                <!-- <view class="text">问问题💭</view> -->
+                <view class="text">问问题(beta)</view>
                 <view class="text textsmall">快来提问吧 ></view>
             </view>
         </navigator>
-        
+
         <navigator hover-class="navigator-hover">
             <view class="firstblock" catchtap="openSoure">
                 <view class="text">关于开源📝</view>
