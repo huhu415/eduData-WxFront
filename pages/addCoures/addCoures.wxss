@@ -7,34 +7,54 @@
     padding-top: 20rpx;
     border-bottom: .5px solid rgba(0, 0, 0, 0.1);
 }
-.sub{
+
+.inputRow2 {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.sub {
     margin: auto;
     margin-left: 0;
     margin-right: 40rpx;
 }
+
 .phone_number {
     margin-left: 40rpx;
     height: 60rpx;
 }
 
-.group{
+.group {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 一行显示5个元素，每个元素的宽度相等 */
-    gap: 10rpx; /* 可选：设置元素之间的间距 */
+    grid-template-columns: repeat(5, 1fr);
+    /* 一行显示5个元素，每个元素的宽度相等 */
+    gap: 10rpx;
+    /* 可选：设置元素之间的间距 */
 }
-.check-select{
+
+.check-select {
     width: 550rpx;
     margin: auto;
 }
-.timecopydele{
+
+.timecopydele {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 一行显示5个元素，每个元素的宽度相等 */
+    grid-template-columns: repeat(2, 1fr);
+    /* 一行显示5个元素，每个元素的宽度相等 */
     text-align: center;
     /* gap: 10rpx; 可选：设置元素之间的间距 */
 }
-.timetable{
+
+.timetable {
     margin-bottom: 100rpx;
 }
-.pushview{
+
+.pushview {
     opacity: 0.5;
+}
+
+input {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 80%;
 }

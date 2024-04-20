@@ -1,15 +1,15 @@
 <view>
     <form bindsubmit="submit">
         <view style="background-color: white; border-radius: 6px; width: 700rpx; margin: auto;margin-bottom: 50rpx;margin-top: 70rpx;">
-            <view class="inputRow1">
+            <view class="inputRow1 inputRow2">
                 <viev class="sub"> 课程 </viev>
                 <input class="input-coures" placeholder="必填" name="coures" />
             </view>
-            <view class="inputRow1">
+            <view class="inputRow1 inputRow2">
                 <viev class="sub"> 颜色 </viev>
                 <input class="input-color" placeholder="选填" value="#c1d1e0" name="color" />
             </view>
-            <view class="inputRow1">
+            <view class="inputRow1 inputRow2">
                 <viev class="sub"> 教师 </viev>
                 <input class="input-teacher" placeholder="选填" name="teacher" />
             </view>
@@ -41,7 +41,7 @@
                         </view>
                     </picker>
                 </view>
-                <view class="inputRow1">
+                <view class="inputRow1 inputRow2">
                     <viev class="sub"> 地点 </viev>
                     <input class="input-color" placeholder="选填" bindblur="inputfocus" data-index="{{index}}" />
                 </view>
