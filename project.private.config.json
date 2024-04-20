@@ -3,21 +3,21 @@
     "projectname": "%E7%90%86%E5%B7%A5%E5%B0%8F%E6%98%8E",
     "setting": {
         "compileHotReLoad": false,
-        "urlCheck": false
+        "urlCheck": true
     },
     "condition": {
         "miniprogram": {
             "list": [
                 {
-                    "name": "addCoures",
-                    "pathName": "pages/addCoures/addCoures",
+                    "name": "gpt",
+                    "pathName": "pages/zhuce/zhuce",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
                 },
                 {
-                    "name": "gpt",
-                    "pathName": "pages/conv/conv",
+                    "name": "addCoures",
+                    "pathName": "pages/addCoures/addCoures",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
