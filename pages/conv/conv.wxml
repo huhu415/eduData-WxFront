@@ -3,8 +3,8 @@
     <view class="fabukuang">
         <view>
             <form bindsubmit="bandsubmit">
-                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请输入...'}}" name="message" bindblur="shurukuang" 	show-confirm-bar="false" value="{{zhantievalue}}" maxlength="-1"></textarea>
-                
+                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请耐心等待, 大约5s...'}}" name="message" bindblur="shurukuang" show-confirm-bar="false" value="{{zhantievalue}}" maxlength="-1"></textarea>
+
                 <view class="sub">
                     <view class="xiaokuang1" bindtap="duquban">粘贴</view>
                     <view class="xiaokuang1 xiaokuang3" bindtap="qingkong">清空</view>

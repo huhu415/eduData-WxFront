@@ -10,7 +10,7 @@
             "list": [
                 {
                     "name": "gpt",
-                    "pathName": "pages/zhuce/zhuce",
+                    "pathName": "pages/conv/conv",
                     "query": "",
                     "launchMode": "default",
                     "scene": null
