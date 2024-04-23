@@ -13,22 +13,14 @@
         "minified": true,
         "enhance": true,
         "showShadowRootInWxmlPanel": true,
-        "packNpmRelationList": [
-            {
-                "packageJsonPath": "./package.json",
-                "miniprogramNpmDistDir": "./miniprogram/"
-            }
-        ],
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         }
     },
-    "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    },
-    "projectname": "理工汪"
+    }
 }
