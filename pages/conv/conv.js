@@ -1,5 +1,5 @@
 // pages/gpt/gpt.js
-import * as TextEncoding from 'text-encoding-shim';
+const TextEncoding = require('text-encoding-shim')
 Page({
     
     /**
@@ -63,7 +63,6 @@ Page({
                 requestTask.abort()
             },
         })
-
 
         requestTask.onChunkReceived(response => {
             wx.hideLoading();
