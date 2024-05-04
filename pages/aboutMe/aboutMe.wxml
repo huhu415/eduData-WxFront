@@ -1,11 +1,7 @@
-<view class="container">
-    <view class="info">
-        <view class="name">我是理工23届计算机研究生</view>
-        <view class="occupation">做这个小程序是为了学golang, 并且已经开源了, 在github上可以看到所有源代码, 所以不会存在商业活动的, 比如打广告之类的.</view>
-
-        <view class="occupation">我自己知道, 肯定是不如市面上大的app好用, 比如wake up 或者 超级课程表之类的. </view>
-        <view class="occupation">但是优势就是我会尽我的可能来让理工的学生们用的舒服的, 并且加一些有趣的免费功能, 就比如现在的那个‘问问题’</view>
-        <view class="occupation" style="margin: 0;">我想打造一个好的开源环境, 没有利益.</view>
-        <view class="occupation">只有分享、帮助🥳🥳🥳</view>
+<view class="pages">
+    <view class="container">
+        <view>
+            <towxml nodes="{{article}}" />
+        </view>
     </view>
 </view>

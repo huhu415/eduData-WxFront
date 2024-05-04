@@ -23,6 +23,7 @@
   //IIEF在初始化执行完后立即被销毁，所以功能上完成的重写Page的作用，类似于执行前的拦截
   //当在某个页面写了onShareAppMessage时，由于assign在后面，所以页面配置会替换默认配置
 App({
+    towxml:require('/components/towxml/index'),
     globalData: {
         apiUrl: 'https://zzyan.com:8000',
         // apiUrl: 'http://127.0.0.1:8080',
