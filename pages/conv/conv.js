@@ -1,5 +1,6 @@
 // pages/gpt/gpt.js
 const TextEncoding = require('text-encoding-shim')
+const app = getApp();
 Page({
     
     /**
@@ -7,6 +8,8 @@ Page({
      */
     data: {
         message: "",
+        isLoading: true,					// 判断是否尚在加载中
+		article: {}						// 内容数据
     },
     qingkong: function () {
         this.setData({
@@ -79,8 +82,10 @@ Page({
                     if (content === undefined && data.choices[0].finish_reason == "stop")
                         break
                     if (content) {
+                        let result = app.towxml(this.data.message + content,'markdown');
                         this.setData({
-                            message: this.data.message + content
+                            message: this.data.message + content,
+                            article: result
                         })
                     }
                     resultText = '';
@@ -93,7 +98,6 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
     },
 
     /**

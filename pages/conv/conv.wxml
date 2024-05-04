@@ -3,7 +3,7 @@
     <view class="fabukuang">
         <view>
             <form bindsubmit="bandsubmit">
-                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'请耐心等待, 大约5s...'}}" name="message" bindblur="shurukuang" show-confirm-bar="false" value="{{zhantievalue}}" maxlength="-1"></textarea>
+                <textarea disabled="{{change == 3 ? true : false}}" placeholder="{{'注意: 每次提问都是全新的对话'}}" name="message" bindblur="shurukuang" show-confirm-bar="false" value="{{zhantievalue}}" maxlength="-1"></textarea>
 
                 <view class="sub">
                     <view class="xiaokuang1" bindtap="duquban">粘贴</view>
@@ -15,7 +15,7 @@
     </view>
 
     <view class="message">
-        <view>{{message}}</view>
+        <towxml nodes="{{article}}" />
     </view>
 </view>
 <!-- <button bindtap="pay">支付0.01元</button> -->
