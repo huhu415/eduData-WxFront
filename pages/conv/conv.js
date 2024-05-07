@@ -61,7 +61,6 @@ Page({
                 "stream": true
             },
             success: (response) => {
-                this.qingkong()
                 wx.hideLoading();
                 requestTask.abort()
             },

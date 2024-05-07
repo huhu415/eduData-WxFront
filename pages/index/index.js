@@ -4,7 +4,28 @@ var app = getApp();
 Page({
     data: {
         // 滚动选择列表
-        type: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"],
+        type: [
+            {'week': 1, 'content': '第 1 周'},
+            {'week': 2, 'content': '第 2 周'},
+            {'week': 3, 'content': '第 3 周'},
+            {'week': 4, 'content': '第 4 周'},
+            {'week': 5, 'content': '第 5 周'},
+            {'week': 6, 'content': '第 6 周'},
+            {'week': 7, 'content': '第 7 周'},
+            {'week': 8, 'content': '第 8 周'},
+            {'week': 9, 'content': '第 9 周'},
+            {'week': 10, 'content': '第 10 周'},
+            {'week': 11, 'content': '第 11 周'},
+            {'week': 12, 'content': '第 12 周'},
+            {'week': 13, 'content': '第 13 周'},
+            {'week': 14, 'content': '第 14 周'},
+            {'week': 15, 'content': '第 15 周'},
+            {'week': 16, 'content': '第 16 周'},
+            {'week': 17, 'content': '第 17 周'},
+            {'week': 18, 'content': '第 18 周'},
+            {'week': 19, 'content': '第 19 周'},
+            {'week': 20, 'content': '第 20 周'},
+        ],
         // 滚动选中项
         selectedTypeIndex: 0,
 
@@ -223,6 +244,10 @@ Page({
     onLoad: function (e) {
         console.log('onLoad');
         var week = this.currentWeek();
+        this.data.type[week - 1].content = "第"+ week +"周(当前周)"
+        this.setData({
+            type : this.data.type
+        })
         this.identy(e, week, 1);
     },
 
