@@ -11,36 +11,32 @@
         "pages/addCoures/addCoures"
     ],
     "window": {
-        "backgroundColor": "#eeeeee",
-        "backgroundTextStyle": "dark",
         "navigationBarTitleText": "理工汪",
-        "navigationBarBackgroundColor": "#104E8B",
-        "navigationBarTextStyle": "white"
+        "navigationBarBackgroundColor": "@navBgColor",
+        "navigationBarTextStyle": "@navTxtStyle",
+        "backgroundTextStyle": "@bgTxtStyle"
     },
     "tabBar": {
-        "color": "#515151",
-        "selectedColor": "#104E8B",
-        "backgroundColor": "#fff",
+        "color": "@tabBarColor",
+        "selectedColor": "@tabSelectedColor",
+        "backgroundColor": "@tabBgColor",
+        "borderStyle": "@tabBorderStyle",
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "text": "",
-                "iconPath": "images/zhuye.png",
-                "selectedIconPath": "images/ziyuan.png"
+                "text": "课表"
             },
             {
                 "pagePath": "pages/CheckScores/CheckScores",
-                "text": "",
-                "iconPath": "images/tubiaozhizuomoban-.png",
-                "selectedIconPath": "images/tubiaozhizuomoban--2.png"
+                "text": "成绩"
             },
             {
                 "pagePath": "pages/zmyself/zmyself",
-                "text": "",
-                "iconPath": "images/geren.png",
-                "selectedIconPath": "images/wode.png"
+                "text": "我的"
             }
         ]
     },
+    "themeLocation":"theme.json",
+    "darkmode": true,
     "lazyCodeLoading": "requiredComponents"
 }

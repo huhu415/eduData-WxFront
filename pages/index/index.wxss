@@ -35,8 +35,12 @@
     display: flex;
     align-items: center;
 }
-
-.left {
+.left{
+    background-color:#eeeeee;
+    color:#104E8B;
+}
+.leftsmall {
+    background-color: #fff;
     margin-left: 5rpx;
     margin-right: 10rpx;
     width: 40rpx;
@@ -46,6 +50,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.leftsmallcontent{
+    font-size: 10pt;
+    color:#000000;
 }
 
 /* .scroll {
@@ -117,15 +125,33 @@
 }
 
 .radiusUp {
-    background-color: #fff;
     border-top-left-radius: 15rpx;
     border-top-right-radius: 15rpx;
     margin-top: 12rpx;
 }
 
 .radiusDown {
-    background-color: #fff;
     border-bottom-left-radius: 15rpx;
     border-bottom-right-radius: 15rpx;
     margin-bottom: 10rpx;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* DarkMode 下的样式 start */
+    .left{
+        background-color:#202020;
+        color:#104E8B;
+    }
+    .top {
+        background-color: #202020;
+        color: #eeeeee;
+    }
+    .leftsmall {
+        background-color: #101010;
+        color: #fff;
+    }
+    .leftsmallcontent{
+        color:#fff;
+    }
+    /* DarkMode 下的样式 end */
 }

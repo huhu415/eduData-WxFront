@@ -25,10 +25,10 @@
     <view style="height:1200rpx; width:100%; display:flex;">
 
         <!--左侧小节课数-->
-        <view style="background-color:#eeeeee;color:#104E8B;">
-            <view wx:for="{{timeTable}}" wx:key="index" class="left {{index % 2 ? 'radiusDown':'radiusUp'}}">
+        <view class="left">
+            <view wx:for="{{timeTable}}" wx:key="index" class="leftsmall {{index % 2 ? 'radiusDown':'radiusUp'}}">
                 <view>{{item.StartTime}}</view>
-                <view style="font-size: 10pt;color:rgb(0, 0, 0);">{{index+1}}</view>
+                <view class="leftsmallcontent">{{index+1}}</view>
                 <view>{{item.EndTime}}</view>
             </view>
         </view>
