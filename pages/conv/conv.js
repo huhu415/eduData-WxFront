@@ -2,14 +2,14 @@
 const TextEncoding = require('text-encoding-shim')
 const app = getApp();
 Page({
-    
+
     /**
      * 页面的初始数据
      */
     data: {
         message: "",
         isLoading: true,					// 判断是否尚在加载中
-		article: {}						// 内容数据
+        article: {}						// 内容数据
     },
     qingkong: function () {
         this.setData({
@@ -43,22 +43,24 @@ Page({
             title: '请求中...',
         })
         const requestTask = wx.request({
-            url: 'https://chat.zzyan.com:8080/v1/chat/completions',
+            url: 'https://zzyan.com:3000/v1/chat/completions',
             method: 'POST',
             enableChunked: true,
             header: {
                 'content-type': 'application/json',
-                "cookie": "123123",
+                'Authorization': 'sk-flLxNbXy19ug1tHa535bB44636D54e56A161D4F1Ea196982',
             },
             data: {
-                "model": "gpt-3.5-turbo",
                 "messages": [
                     {
-                        "role": "user",
+                        "role": "system",
                         "content": e.detail.value.message
                     }
                 ],
-                "stream": true
+                "stream": true,
+                "model": "gpt-35-turbo",
+                "presence_penalty": 0,
+                "temperature": 0.5,
             },
             success: (response) => {
                 wx.hideLoading();
@@ -68,10 +70,10 @@ Page({
 
         requestTask.onChunkReceived(response => {
             wx.hideLoading();
+            let thistheme = wx.getAppBaseInfo().theme
             const uint8Array = new Uint8Array(response.data);
             let resultText = '';
             let arrayBuffer = new TextEncoding.TextDecoder('utf-8').decode(uint8Array);
-
             for (let i = 0; i < arrayBuffer.length; i++) {
                 if (arrayBuffer[i] == '\n' && arrayBuffer[++i] == '\n') {
                     // console.log(i)
@@ -81,7 +83,7 @@ Page({
                     if (content === undefined && data.choices[0].finish_reason == "stop")
                         break
                     if (content) {
-                        let result = app.towxml(this.data.message + content,'markdown');
+                        let result = app.towxml(this.data.message + content, 'markdown', {theme:thistheme});
                         this.setData({
                             message: this.data.message + content,
                             article: result
@@ -97,6 +99,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        wx.onThemeChange((res) => {
+            let result = app.towxml(this.data.message, 'markdown', {theme:res.theme});
+            this.setData({
+                article: result
+            })
+          })
     },
 
     /**
@@ -145,6 +153,5 @@ Page({
      * 用户点击右上角分享
      */
     onShareAppMessage() {
-
-    }
+    },
 })
