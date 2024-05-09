@@ -52,6 +52,14 @@
 .flex-1{
   flex: 1;
 }
+@media (prefers-color-scheme: dark) {
+    /* DarkMode 下的样式 start */
+    .statusBar,.navigationBar{
+        background-color: #191919;
+      }
+    /* DarkMode 下的样式 end */
+}
+
 
 
 /* 以下为展示各个区域位置的样式 */

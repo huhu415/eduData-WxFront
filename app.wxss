@@ -11,3 +11,11 @@ page {
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+@media (prefers-color-scheme: dark) {
+    /* DarkMode 下的样式 start */
+    page {
+        background: #202020;
+    }
+    /* DarkMode 下的样式 end */
+}
+
