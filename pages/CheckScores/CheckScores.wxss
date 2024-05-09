@@ -17,7 +17,7 @@
     grid-template-columns: 5.5fr 1.5fr 1.5fr 1.5fr;
     margin: 10px;
     border-radius: 6px;
-    background-color: rgb(208, 220, 231);
+    background-color: #D0DCE7;
     font-size: smaller;
     height: 60rpx;
 }
@@ -27,4 +27,13 @@
     margin: auto;
     margin-left: 40rpx;
     border-radius: 2%;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* DarkMode 下的样式 start */
+
+    .CouresGradLine {
+        background-color: #777E85;
+    }
+    /* DarkMode 下的样式 end */
 }

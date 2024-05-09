@@ -107,7 +107,7 @@
     grid-template-columns: 4.5fr 3.5fr 2fr;
     margin: 10px;
     border-radius: 6px;
-    background-color: rgb(208, 220, 231);
+    background-color: #D0DCE7;
     font-size: smaller;
     height: 60rpx;
 }
@@ -147,11 +147,14 @@
         color: #eeeeee;
     }
     .leftsmall {
-        background-color: #101010;
+        background-color: #101015;
         color: #fff;
     }
     .leftsmallcontent{
         color:#fff;
+    }
+    .othercourses {
+        background-color: #777E85;
     }
     /* DarkMode 下的样式 end */
 }
