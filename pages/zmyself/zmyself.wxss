@@ -95,5 +95,8 @@
     .txkuang {
         background-color: #000000;
     }
+    .image {
+        filter: brightness(70%);
+    }
     /* DarkMode 下的样式 end */
 }
