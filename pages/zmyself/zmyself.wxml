@@ -81,7 +81,7 @@
     </view>
 
 
-    <view class="tishi">
+    <!-- <view class="tishi">
         <view class="dengdai">哈理工只能于日间,登陆或拉取课程表</view>
-    </view>
+    </view> -->
 </view>

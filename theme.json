@@ -5,21 +5,25 @@
         "bgTxtStyle": "light",
 
         "tabSelectedColor": "#104E8B",
-        "tabBarColor": "#000000",
-        "tabBgColor": "#ffffff",
+        "tabBarColor": "#202020",
+        "tabBgColor": "#eeeeee",
         "tabBorderStyle": "black",
 
-        "themeColor1": "#E8E8E8"
+        "windowBgColor": "#eeeeee",
+
+        "themeColor1": "#eeeeee"
     },
     "dark": {
-        "navBgColor": "#191919",
+        "navBgColor": "#202020",
         "navTxtStyle": "white",
         "bgTxtStyle": "dark",
 
-        "tabSelectedColor": "#E8E8E8",
+        "tabSelectedColor": "#eeeeee",
         "tabBarColor": "#696969",
         "tabBgColor": "#202020",
         "tabBorderStyle": "white",
+
+        "windowBgColor": "#202020",
 
         "themeColor1": "#202020"
     }

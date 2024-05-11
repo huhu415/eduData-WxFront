@@ -14,7 +14,8 @@
         "navigationBarTitleText": "理工汪",
         "navigationBarBackgroundColor": "@navBgColor",
         "navigationBarTextStyle": "@navTxtStyle",
-        "backgroundTextStyle": "@bgTxtStyle"
+        "backgroundTextStyle": "@bgTxtStyle",
+        "backgroundColor": "@windowBgColor"
     },
     "tabBar": {
         "color": "@tabBarColor",

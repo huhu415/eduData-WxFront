@@ -55,7 +55,7 @@
 @media (prefers-color-scheme: dark) {
     /* DarkMode 下的样式 start */
     .statusBar,.navigationBar{
-        background-color: #191919;
+        background-color: #202020;
       }
     /* DarkMode 下的样式 end */
 }
