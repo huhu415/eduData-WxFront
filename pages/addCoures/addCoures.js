@@ -5,7 +5,7 @@ Page({
         checkboxItems: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
         timetable: [{ "checkboxs": [], "multiIndex": [0, 0, 0], "place": "" }],
         multiArray: [["星期?", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
-        [["第?大节"], ["第1大节"], ["第2大节"], ["第3大节"], ["第4大节"], ["第5大节"], ["第6大节"]],
+        [["从第?大节开始"], ["第1大节"], ["第2大节"], ["第3大节"], ["第4大节"], ["第5大节"], ["第6大节"]],
         [["上?小节"], ["1小节"], ["2小节"], ["3小节"], ["4小节"]]],
     },
     checkboxChange(e) {
@@ -32,6 +32,10 @@ Page({
     },
     submit: function (e) {
         wx.vibrateShort()
+        for (var i = 0; i < this.data.timetable.length; i++) {
+            this.data.timetable[i].multiIndex[1] *= 2;
+            this.data.timetable[i].multiIndex[1] -= 1;
+        }
         wx.getStorage({
             key: 'key', // 指定要获取的数据的 key
             encrypt: true,
