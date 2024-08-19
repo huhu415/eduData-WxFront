@@ -76,7 +76,7 @@ Page({
             return
         }
         wx.showLoading({
-            title: '请求中...',
+            title: '同学请耐心等待...',
         })
         orderInfo.school = this.data.multiArray[0][orderInfo.selector[0]].value,
             orderInfo.studentType = this.data.multiArray[1][orderInfo.selector[1]].value,
@@ -101,7 +101,7 @@ Page({
                     wx.showToast({
                         title: res.data.message,
                         icon: 'none',
-                        duration: 1800
+                        duration: 3500
                     })
                 } else if (res.data.status == "success") {
                     console.log('请求成功', res);
