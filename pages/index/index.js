@@ -233,7 +233,8 @@ Page({
 
     currentWeek: function (e) {
         // 计算出距离3.4日到今天, 是第几周
-        var StartData = new Date(2024, 3 - 1, 4) //3月4日
+        // todo 这里要随开学日期更改
+        var StartData = new Date(2024, 8 - 1, 26) //8月26日
         var currentDate = new Date();
         var gapday = parseInt((currentDate - StartData) / 86400000)
         var week = parseInt(gapday / 7) + 1
@@ -244,6 +245,7 @@ Page({
     onLoad: function (e) {
         console.log('onLoad');
         var week = this.currentWeek();
+        console.log("this week is"+week)
         this.data.type[week - 1].content = "第"+ week +"周(当前周)"
         this.setData({
             type : this.data.type
