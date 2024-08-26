@@ -31,7 +31,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    url: app.globalData.apiUrl+'/updataGrade',
+                    url: app.globalData.apiUrl + '/updataGrade',
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
@@ -99,7 +99,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    url: app.globalData.apiUrl+'/updata',
+                    url: app.globalData.apiUrl + '/updata',
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
@@ -160,27 +160,27 @@ Page({
         wx.showModal({
             content: '确定要重新登陆么？',
             success: function (res) {
-              if (res.confirm) {
-                wx.getStorage({
-                    key: 'key', // 指定要获取的数据的 key
-                    encrypt: true,
-                    success: (res) => {
-                        wx.clearStorageSync()
-                        wx.navigateTo({
-                            url: '/pages/zhuce/zhuce',
-                        })
-                    },
-                    fail: (err) => {
-                        wx.showToast({
-                            title: "请检查是否登陆",
-                            icon: 'none',
-                            duration: 1800
-                        })
-                    }
-                })
-              }
+                if (res.confirm) {
+                    wx.getStorage({
+                        key: 'key', // 指定要获取的数据的 key
+                        encrypt: true,
+                        success: (res) => {
+                            wx.clearStorageSync()
+                            wx.navigateTo({
+                                url: '/pages/zhuce/zhuce',
+                            })
+                        },
+                        fail: (err) => {
+                            wx.showToast({
+                                title: "请检查是否登陆",
+                                icon: 'none',
+                                duration: 1800
+                            })
+                        }
+                    })
+                }
             }
-          })
+        })
     },
 
     // 开源按钮

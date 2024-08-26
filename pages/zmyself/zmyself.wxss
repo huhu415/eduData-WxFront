@@ -64,7 +64,7 @@
 }
 
 .usernum {
-    font-size:larger;
+    font-size: larger;
     opacity: 0.7;
 }
 
@@ -87,16 +87,21 @@
     height: 100%;
     padding: 0px;
 }
+
 @media (prefers-color-scheme: dark) {
+
     /* DarkMode 下的样式 start */
-    .txkuang button{
+    .txkuang button {
         background-color: #000000;
     }
+
     .txkuang {
         background-color: #000000;
     }
+
     .image {
         filter: brightness(70%);
     }
+
     /* DarkMode 下的样式 end */
 }

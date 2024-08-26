@@ -1,14 +1,14 @@
 {
-  "name": "wxfront",
-  "version": "1.0.0",
-  "description": "因为没学多久前端, 所以有点潦草",
-  "main": "EncoderDecoderTogether.min.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "text-encoding-shim": "^1.0.5"
-  }
+    "name": "wxfront",
+    "version": "1.0.0",
+    "description": "因为没学多久前端, 所以有点潦草",
+    "main": "EncoderDecoderTogether.min.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "text-encoding-shim": "^1.0.5"
+    }
 }

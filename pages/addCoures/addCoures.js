@@ -3,10 +3,30 @@ var app = getApp();
 Page({
     data: {
         checkboxItems: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
-        timetable: [{ "checkboxs": [], "multiIndex": [0, 0, 0], "place": "" }],
-        multiArray: [["星期?", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
-        [["从第?大节开始"], ["第1大节"], ["第2大节"], ["第3大节"], ["第4大节"], ["第5大节"], ["第6大节"]],
-        [["上?小节"], ["1小节"], ["2小节"], ["3小节"], ["4小节"]]],
+        timetable: [{
+            "checkboxs": [],
+            "multiIndex": [0, 0, 0],
+            "place": ""
+        }],
+        multiArray: [
+            ["星期?", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+            [
+                ["从第?大节开始"],
+                ["第1大节"],
+                ["第2大节"],
+                ["第3大节"],
+                ["第4大节"],
+                ["第5大节"],
+                ["第6大节"]
+            ],
+            [
+                ["上?小节"],
+                ["1小节"],
+                ["2小节"],
+                ["3小节"],
+                ["4小节"]
+            ]
+        ],
     },
     checkboxChange(e) {
         const stringArray = e.detail.value;
@@ -89,7 +109,11 @@ Page({
         })
     },
     copy() {
-        this.data.timetable.push({ "checkboxs": [], "multiIndex": [0, 0, 0], "place": "" })
+        this.data.timetable.push({
+            "checkboxs": [],
+            "multiIndex": [0, 0, 0],
+            "place": ""
+        })
         this.setData({
             timetable: this.data.timetable
         })

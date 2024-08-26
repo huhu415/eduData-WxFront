@@ -22,8 +22,7 @@
         "selectedColor": "@tabSelectedColor",
         "backgroundColor": "@tabBgColor",
         "borderStyle": "@tabBorderStyle",
-        "list": [
-            {
+        "list": [{
                 "pagePath": "pages/index/index",
                 "text": "课表"
             },
@@ -37,7 +36,7 @@
             }
         ]
     },
-    "themeLocation":"theme.json",
+    "themeLocation": "theme.json",
     "darkmode": true,
     "lazyCodeLoading": "requiredComponents"
 }
