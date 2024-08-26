@@ -22,7 +22,7 @@
                 </view>
             </picker>
         </view>
-        
+
         <button class="buttonStyle" type="primary" form-type="submit"> 登陆 </button>
     </form>
 </view>

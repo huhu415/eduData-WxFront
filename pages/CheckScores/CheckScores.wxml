@@ -1,8 +1,8 @@
 <view class="page">
     <!-- 加权均分, 加拿大版绩点 -->
     <view class="gradline">
-        <view>总加权均分 : {{WeightedAverage}}</view>
-        <view>加拿大绩点算法 : {{AcademicCredits}}</view>
+        <view>总加权均分: {{WeightedAverage}}</view>
+        <view>澳洲7分制: {{AcademicCredits}}</view>
     </view>
 
 

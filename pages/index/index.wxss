@@ -35,10 +35,12 @@
     display: flex;
     align-items: center;
 }
-.left{
-    background-color:#eeeeee;
-    color:#104E8B;
+
+.left {
+    background-color: #eeeeee;
+    color: #104E8B;
 }
+
 .leftsmall {
     background-color: #fff;
     margin-left: 5rpx;
@@ -51,9 +53,10 @@
     align-items: center;
     flex-direction: column;
 }
-.leftsmallcontent{
+
+.leftsmallcontent {
     font-size: 10pt;
-    color:#000000;
+    color: #000000;
 }
 
 /* .scroll {
@@ -137,24 +140,30 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
     /* DarkMode 下的样式 start */
-    .left{
-        background-color:#202020;
-        color:#104E8B;
+    .left {
+        background-color: #202020;
+        color: #104E8B;
     }
+
     .top {
         background-color: #202020;
         color: #eeeeee;
     }
+
     .leftsmall {
         background-color: #101015;
         color: #fff;
     }
-    .leftsmallcontent{
-        color:#fff;
+
+    .leftsmallcontent {
+        color: #fff;
     }
+
     .othercourses {
         background-color: #777E85;
     }
+
     /* DarkMode 下的样式 end */
 }

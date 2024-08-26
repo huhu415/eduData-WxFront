@@ -8,8 +8,8 @@ Page({
      */
     data: {
         message: "",
-        isLoading: true,					// 判断是否尚在加载中
-        article: {}						// 内容数据
+        isLoading: true, // 判断是否尚在加载中
+        article: {} // 内容数据
     },
     qingkong: function () {
         this.setData({
@@ -51,12 +51,10 @@ Page({
                 'Authorization': 'sk-flLxNbXy19ug1tHa535bB44636D54e56A161D4F1Ea196982',
             },
             data: {
-                "messages": [
-                    {
-                        "role": "system",
-                        "content": e.detail.value.message
-                    }
-                ],
+                "messages": [{
+                    "role": "system",
+                    "content": e.detail.value.message
+                }],
                 "stream": true,
                 "model": "gpt-35-turbo",
                 "presence_penalty": 0,
@@ -83,7 +81,9 @@ Page({
                     if (content === undefined && data.choices[0].finish_reason == "stop")
                         break
                     if (content) {
-                        let result = app.towxml(this.data.message + content, 'markdown', {theme:thistheme});
+                        let result = app.towxml(this.data.message + content, 'markdown', {
+                            theme: thistheme
+                        });
                         this.setData({
                             message: this.data.message + content,
                             article: result
@@ -100,11 +100,13 @@ Page({
      */
     onLoad(options) {
         wx.onThemeChange((res) => {
-            let result = app.towxml(this.data.message, 'markdown', {theme:res.theme});
+            let result = app.towxml(this.data.message, 'markdown', {
+                theme: res.theme
+            });
             this.setData({
                 article: result
             })
-          })
+        })
     },
 
     /**
@@ -152,6 +154,5 @@ Page({
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage() {
-    },
+    onShareAppMessage() {},
 })
