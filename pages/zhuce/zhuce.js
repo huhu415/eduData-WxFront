@@ -10,7 +10,8 @@ Page({
         multiArray: [
             [
                 { value: "hrbust", name: '哈尔滨理工大学' },
-                { value: "neau", name: "东北农业大学" }
+                { value: "neau", name: "东北农业大学" },
+                { value: "hlju", name: "黑龙江大学"}
             ], // 年级
             [
                 { value: "1", name: '本科' },
@@ -21,7 +22,10 @@ Page({
         classArray: [
             [
                 { value: "1", name: '本科' },
-                { value: "2", name: '硕士' },
+                // { value: "2", name: '硕士' },
+            ],
+            [
+                { value: "1", name: '本科' },
             ],
             [
                 { value: "1", name: '本科' },
