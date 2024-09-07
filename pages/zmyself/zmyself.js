@@ -35,6 +35,7 @@ Page({
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
+                        'cookie': res.data.authentication,
                     },
                     data: {
                         username: res.data.user,
@@ -103,6 +104,7 @@ Page({
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
+                        'cookie': res.data.authentication,
                     },
                     data: {
                         username: res.data.user,
