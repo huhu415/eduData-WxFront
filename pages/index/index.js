@@ -216,8 +216,9 @@ Page({
                         },
                         success: (res) => {
                             if (res.statusCode == 200) {
+                                // console.log(res.data)
                                 this.setData({
-                                    timeTable: res.data.timeTable
+                                    timeTable: res.data.message
                                 })
                                 // console.log(this.data.timeTable)
                             }
