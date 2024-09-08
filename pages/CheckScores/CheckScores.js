@@ -18,7 +18,7 @@ Page({
             encrypt: true,
             success: (res) => {
                 wx.request({
-                    url: app.globalData.apiUrl + '/getgrade/',
+                    url: app.globalData.apiUrl + '/grades/all',
                     method: 'POST',
                     header: {
                         'content-type': 'application/json',

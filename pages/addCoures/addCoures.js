@@ -64,7 +64,7 @@ Page({
                     title: '请求中...',
                 })
                 wx.request({
-                    url: app.globalData.apiUrl + '/addcoures',
+                    url: app.globalData.apiUrl + '/courses/add',
                     method: 'POST',
                     header: {
                         'content-type': 'application/json',

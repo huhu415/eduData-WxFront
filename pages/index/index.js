@@ -144,8 +144,8 @@ Page({
 
                 // 有时间和地点的课程
                 wx.request({
-                    url: app.globalData.apiUrl + '/getweekcoure/' + weekreq,
-                    method: 'POST',
+                    url: app.globalData.apiUrl + '/courses/' + weekreq,
+                    method: "POST",
                     header: {
                         'content-type': 'application/json',
                         "cookie": res.data.authentication,
@@ -202,7 +202,7 @@ Page({
                 if (refesh == 1) {
                     // 请求时间表
                     wx.request({
-                        url: app.globalData.apiUrl + '/getTimeTable',
+                        url: app.globalData.apiUrl + '/timetable',
                         method: 'POST',
                         header: {
                             'content-type': 'application/json',
@@ -226,7 +226,7 @@ Page({
                     })
                     // 没有时间或地点的课程
                     wx.request({
-                        url: app.globalData.apiUrl + '/getweekcoure/0',
+                        url: app.globalData.apiUrl + '/courses/0',
                         method: 'POST',
                         header: {
                             'content-type': 'application/json',

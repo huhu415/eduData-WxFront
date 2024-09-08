@@ -31,7 +31,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    url: app.globalData.apiUrl + '/updataGrade',
+                    url: app.globalData.apiUrl + '/grades/renew',
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
@@ -100,7 +100,7 @@ Page({
                 })
                 console.log(res.data.user)
                 wx.request({
-                    url: app.globalData.apiUrl + '/updata',
+                    url: app.globalData.apiUrl + '/courses/renew',
                     method: "POST",
                     header: {
                         'content-type': 'application/json',
