@@ -146,6 +146,7 @@ Page({
                 wx.request({
                     url: app.globalData.apiUrl + '/courses/' + weekreq,
                     method: "POST",
+                    enableHttp2: true,
                     header: {
                         'content-type': 'application/json',
                         "cookie": res.data.authentication,
@@ -204,6 +205,7 @@ Page({
                     wx.request({
                         url: app.globalData.apiUrl + '/timetable',
                         method: 'POST',
+                        enableHttp2: true,
                         header: {
                             'content-type': 'application/json',
                             "cookie": res.data.authentication,
@@ -228,6 +230,7 @@ Page({
                     wx.request({
                         url: app.globalData.apiUrl + '/courses/0',
                         method: 'POST',
+                        enableHttp2: true,
                         header: {
                             'content-type': 'application/json',
                             "cookie": res.data.authentication,

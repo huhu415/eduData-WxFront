@@ -88,6 +88,7 @@ Page({
         wx.request({
             url: app.globalData.apiUrl+'/signin',
             method: "POST",
+            enableHttp2: true,
             header: {
                 'content-type': 'application/json',
             },

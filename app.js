@@ -25,7 +25,7 @@
 App({
     towxml: require('/components/towxml/index'),
     globalData: {
-        apiUrl: 'https://zzyan.com:8000',
+        apiUrl: 'https://edu.zzyan.com',
         // apiUrl: 'http://127.0.0.1:8080',
         userInfo: null
     },

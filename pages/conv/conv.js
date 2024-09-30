@@ -43,9 +43,10 @@ Page({
             title: '请求中...',
         })
         const requestTask = wx.request({
-            url: 'https://zzyan.com:3000/v1/chat/completions',
+            url: 'https://zzyan.com/v1/chat/completions',
             method: 'POST',
             enableChunked: true,
+            enableHttp2: true,
             header: {
                 'content-type': 'application/json',
                 'Authorization': 'sk-flLxNbXy19ug1tHa535bB44636D54e56A161D4F1Ea196982',

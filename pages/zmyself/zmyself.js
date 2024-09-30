@@ -33,6 +33,7 @@ Page({
                 wx.request({
                     url: app.globalData.apiUrl + '/grades/renew',
                     method: "POST",
+                    enableHttp2: true,
                     header: {
                         'content-type': 'application/json',
                         'cookie': res.data.authentication,
@@ -102,6 +103,7 @@ Page({
                 wx.request({
                     url: app.globalData.apiUrl + '/courses/renew',
                     method: "POST",
+                    enableHttp2: true,
                     header: {
                         'content-type': 'application/json',
                         'cookie': res.data.authentication,

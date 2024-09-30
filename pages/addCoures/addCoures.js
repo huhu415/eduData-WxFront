@@ -66,6 +66,7 @@ Page({
                 wx.request({
                     url: app.globalData.apiUrl + '/courses/add',
                     method: 'POST',
+                    enableHttp2: true,
                     header: {
                         'content-type': 'application/json',
                         "cookie": res.data.authentication,
